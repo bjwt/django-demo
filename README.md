@@ -41,6 +41,7 @@ deployment:
         <socket>127.0.0.1:9090</socket>
         <chdir>/root/django-demo/blog</chdir>
         <module>django_wsgi</module>
+        <plugin>python</plugin>
         <processes>4</processes>
         <daemonize>uwsgi.log</daemonize>
         </uwsgi>
@@ -49,6 +50,6 @@ deployment:
 
 5. start uwsgi
 	in the dir where manager.py lies, 
-	uwsgi --plugin python -x uwsgi_socket.xml
+	uwsgi -x uwsgi_socket.xml
 6. start nginx
 	nginx
